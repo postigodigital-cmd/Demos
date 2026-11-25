@@ -10,6 +10,7 @@ SB = 44                    # barra de estado (hora, rede, Wi-Fi, bateria)
 PH = H - SB                # altura visível da página
 CREME = (246, 240, 230)
 ESC = 0.68
+FRACAO = 0.5               # até onde desce (metade da página)
 CORES = int(sys.argv[3]) if len(sys.argv) > 3 else 96
 DITHER = False                 # escala final do ecrã dentro do GIF
 
@@ -20,12 +21,13 @@ with sync_playwright() as p:
     pg.add_style_tag(content=".aviso{display:none!important}html{scroll-behavior:auto!important}")
     pg.wait_for_timeout(500)
     total = pg.evaluate("document.documentElement.scrollHeight") - PH
+    total = min(total, int(total * FRACAO))     # de propósito: só até meio da página
     nome = pg.evaluate("document.title.split(' · ')[0]")
-    passos = max(24, int(total / 32))           # ~45 px por frame a descer
+    passos = max(24, int(total / 17))           # ~45 px por frame a descer
     posicoes = [0] * 1                             # topo (pausa feita pela duração)
     descer = [round(total * (1 - math.cos(math.pi * i / passos)) / 2) for i in range(1, passos + 1)]
-    subir = [round(total * (1 + math.cos(math.pi * i / 16)) / 2) for i in range(1, 17)]
-    seq = [(0, 1200)] + [(y, 45) for y in descer] + [(total, 600)] + [(y, 45) for y in subir]
+    subir = [round(total * (1 + math.cos(math.pi * i / 11)) / 2) for i in range(1, 12)]
+    seq = [(0, 1200)] + [(y, 50) for y in descer] + [(total, 900)] + [(y, 45) for y in subir]
     shots = {}
     for y, _ in seq:
         if y not in shots:
