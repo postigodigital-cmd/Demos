@@ -1,7 +1,7 @@
 name: Descarregar fotografias das demos
 on:
   push:
-    paths: ['**/fotos.txt']
+    paths: ['**/fotos.txt', '.github/workflows/fotos.yml']
   workflow_dispatch:
 permissions:
   contents: write
@@ -23,5 +23,6 @@ jobs:
       - name: Guardar
         run: |
           git config user.name "Postigo Digital"; git config user.email "postigodigital@gmail.com"
-          git add -A -- '*/img' || true
+          ls -la */img || true
+          git add -A .
           git diff --cached --quiet || (git commit -m "Fotografias das demos" && git push)
