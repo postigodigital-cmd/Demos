@@ -27,7 +27,7 @@ with sync_playwright() as p:
     posicoes = [0] * 1                             # topo (pausa feita pela duração)
     descer = [round(total * (1 - math.cos(math.pi * i / passos)) / 2) for i in range(1, passos + 1)]
     subir = [round(total * (1 + math.cos(math.pi * i / 11)) / 2) for i in range(1, 12)]
-    seq = [(0, 1200)] + [(y, 50) for y in descer] + [(total, 900)] + [(y, 45) for y in subir]
+    seq = [(0, 1200)] + [(y, 80) for y in descer] + [(total, 900)] + [(y, 60) for y in subir]
     shots = {}
     for y, _ in seq:
         if y not in shots:
