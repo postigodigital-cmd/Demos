@@ -18,8 +18,8 @@ header{position:sticky;top:0;z-index:5;background:rgba(251,248,242,.94);backdrop
 .lang{font:600 12px -apple-system,Segoe UI,Roboto,sans-serif;display:flex;gap:4px}
 .lang button{border:1px solid #cfc6b4;background:none;border-radius:20px;padding:5px 10px;color:var(--verde);cursor:pointer}
 .lang button.on{background:var(--verde);color:#fff;border-color:var(--verde)}
-.hero{background:radial-gradient(120% 80% at 80% 10%,#3b6a4c 0,var(--verde) 55%,#15291e 100%);color:var(--creme);padding:46px 22px 40px;position:relative;overflow:hidden}
-.hero svg.flor{position:absolute;right:-70px;top:-40px;width:250px;opacity:.32}
+.hero{min-height:560px;background:linear-gradient(180deg,rgba(21,41,30,.55) 0,rgba(21,41,30,.78) 55%,rgba(21,41,30,.95) 100%),url('https://quintaldoforno.com/wp-content/uploads/2022/02/IMG_8063-scaled.jpg') center/cover,var(--verde);color:var(--creme);padding:46px 22px 40px;position:relative;overflow:hidden}
+.hero svg.flor{display:none}
 .hero .kicker{position:relative}
 .kicker{font:600 11px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--rosa)}
 .hero h1{font-weight:400;font-size:42px;line-height:1.05;margin:14px 0 14px;max-width:11ch;position:relative}
@@ -32,9 +32,9 @@ section{padding:44px 22px}
 h2{font-weight:400;font-size:30px;line-height:1.15;color:var(--verde);margin:8px 0 14px}
 .foto{border-radius:16px;aspect-ratio:4/3;display:flex;align-items:flex-end;padding:14px;color:#fff;font:600 12px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.04em;position:relative;overflow:hidden}
 .foto span{background:rgba(0,0,0,.35);padding:5px 9px;border-radius:20px}
-.f1{background:linear-gradient(160deg,#6f8f6a,#2f4a35 70%)}
-.f2{background:linear-gradient(160deg,#d68a8f,#8a2632 75%)}
-.f3{background:linear-gradient(160deg,#a99677,#4f4636 75%)}
+.f1{background:url('https://quintaldoforno.com/wp-content/uploads/2025/09/IMG_2328-edited.jpg') center/cover,linear-gradient(160deg,#6f8f6a,#2f4a35 70%)}
+.f2{background:url('https://quintaldoforno.com/wp-content/uploads/2022/02/Collage-Camelias.jpg') center/cover,linear-gradient(160deg,#d68a8f,#8a2632 75%)}
+.f3{background:url('https://quintaldoforno.com/wp-content/uploads/2022/02/Porta-de-entrada-2013.05-1024x683-1.jpg') center/cover,linear-gradient(160deg,#a99677,#4f4636 75%)}
 .cartao{background:#fff;border:1px solid #ebe3d4;border-radius:18px;padding:18px;margin-top:16px}
 .preco{display:flex;align-items:baseline;gap:8px;margin:6px 0 2px}
 .preco b{font-size:30px;font-weight:400;color:var(--verde)}
@@ -83,7 +83,7 @@ body.en [data-en]{display:revert}
   <div class="kicker" style="color:var(--camelia)">Casa da Hera</div>
   <h2 data-pt>Dormir dentro do jardim.</h2>
   <h2 data-en>Sleep inside the garden.</h2>
-  <div class="foto f1"><span data-pt>As vossas fotografias da Casa da Hera</span><span data-en>Your Casa da Hera photos</span></div>
+  <div class="foto f1"><span data-pt>Casa da Hera</span><span data-en>Casa da Hera</span></div>
   <div class="cartao">
     <div class="sans" style="font-size:13px;color:var(--suave)" data-pt>Preço por noite</div>
     <div class="sans" style="font-size:13px;color:var(--suave)" data-en>Price per night</div>
@@ -124,7 +124,7 @@ body.en [data-en]{display:revert}
   <h2 data-en>One family, one garden.</h2>
   <p data-pt>Fundado no final do século XIX por Manoel Cabral Soares de Albergaria e na família Cabral desde então, o Quintal do Forno é hoje um projeto de conservação do património, das camélias e da paisagem da Serra.</p>
   <p data-en>Founded in the late 19th century by Manoel Cabral Soares de Albergaria and in the Cabral family ever since, Quintal do Forno is today a project to preserve heritage, camellias and the Serra landscape.</p>
-  <div class="foto f3" style="margin-top:8px"><span data-pt>Fotografias de arquivo da família</span><span data-en>Family archive photos</span></div>
+  <div class="foto f3" style="margin-top:8px"><span data-pt>A porta do jardim</span><span data-en>The garden gate</span></div>
 </section>
 
 <footer>
