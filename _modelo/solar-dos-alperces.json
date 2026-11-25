@@ -1,10 +1,36 @@
-{"nome":"Solar dos Alperces","local":"Travancinha · Seia · Serra da Estrela","cor":"#4A3B2C","acento":"#D9822B",
-"hero":"https://solardosalperces.pt/wp-content/uploads/home13-1280x960.jpg",
-"kicker":"Travancinha · Seia · Serra da Estrela",
-"titulo":"Sete quartos com nome de pedra, ao pé da Serra.",
-"sub":"Turismo de Habitação em Travancinha. Granito, Quartzo, Mica, Feldspato... cada quarto conta um pouco da Serra.",
-"k_unid":"Os quartos","t_unid":"Sete quartos, sete minerais.",
-"unidades":[{"nome":"Granito · Quartzo · Mica","desc":"Quartos temáticos com nome de minerais da Serra","img":"https://solardosalperces.pt/wp-content/uploads/IMG_0886-1280x960.jpg"},
-{"nome":"Biotite · Moscovite · Zircão · Feldspato","desc":"Cada um com a sua personalidade","img":"https://solardosalperces.pt/wp-content/uploads/IMG_0924-1280x960.jpg"}],
-"preco":"70 €","promo":"10% de desconto em reservas diretas · código SA10","t_dest":"Descanso a sério na Serra.",
-"destaques":["🪨 Quartos temáticos","🏔️ Serra da Estrela","🏛️ Monumentos perto","💬 WhatsApp direto","🏷️ -10% reserva direta","🛏️ 7 quartos"]}
+{
+ "nome": "Solar dos Alperces",
+ "local": "Travancinha · Seia · Serra da Estrela",
+ "cor": "#4A3B2C",
+ "acento": "#D9822B",
+ "hero": "https://solardosalperces.pt/wp-content/uploads/home13-1280x960.jpg",
+ "kicker": "Travancinha · Seia · Serra da Estrela",
+ "titulo": "Sete quartos com nome de pedra, ao pé da Serra.",
+ "sub": "Turismo de Habitação em Travancinha. Granito, Quartzo, Mica, Feldspato... cada quarto conta um pouco da Serra.",
+ "k_unid": "Os quartos",
+ "t_unid": "Sete quartos, sete minerais.",
+ "unidades": [
+  {
+   "nome": "Granito · Quartzo · Mica",
+   "desc": "Quartos temáticos com nome de minerais da Serra",
+   "img": "https://solardosalperces.pt/wp-content/uploads/IMG_0886-1280x960.jpg"
+  },
+  {
+   "nome": "Biotite · Moscovite · Zircão · Feldspato",
+   "desc": "Cada um com a sua personalidade",
+   "img": "https://solardosalperces.pt/wp-content/uploads/IMG_0924-1280x960.jpg"
+  }
+ ],
+ "preco": "70 €",
+ "promo": "10% de desconto em reservas diretas · código SA10",
+ "t_dest": "Descanso a sério na Serra.",
+ "destaques": [
+  "🪨 Quartos temáticos",
+  "🏔️ Serra da Estrela",
+  "🏛️ Monumentos perto",
+  "💬 WhatsApp direto",
+  "🏷️ -10% reserva direta",
+  "🛏️ 7 quartos"
+ ],
+ "extra": "<section style=\"padding-top:0\"><div class=\"k\" style=\"color:var(--a)\">Os minerais da Serra</div><h2>Escolha a sua pedra.</h2><div class=\"min\"><div style=\"background:#7a7069\">Granito</div><div style=\"background:#b9a99a\">Quartzo</div><div style=\"background:#8d7b5e\">Mica</div><div style=\"background:#c08a64\">Feldspato</div><div style=\"background:#4b3f36\">Biotite</div><div style=\"background:#a8a39a\">Moscovite</div><div style=\"background:#9c5a3c\">Zircão</div></div><p class=\"nota\" style=\"margin-top:10px\">Cada quarto com a sua página, fotografias e preço.</p></section>"
+}

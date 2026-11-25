@@ -28,7 +28,7 @@ section{{padding:42px 22px}}h2{{font-weight:400;font-size:29px;color:var(--c);ma
 .nota{{font:12px -apple-system,Roboto,sans-serif;color:var(--suave)}}
 ul.ch{{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;font:14px -apple-system,Roboto,sans-serif}}ul.ch li{{background:var(--creme);border-radius:10px;padding:10px}}
 .cupao{{margin-top:14px;border:2px dashed var(--a);border-radius:12px;padding:12px;text-align:center;font:600 15px -apple-system,Roboto,sans-serif;color:var(--a)}}
-.dir{{background:var(--c);color:#fff}}.dir h2{{color:#fff}}.dir p{{opacity:.88;margin-bottom:10px}}
+.xt{{display:grid;gap:10px}}.xt div{{background:#fff;border:1px solid #ebe3d4;border-radius:14px;padding:14px 16px;font:15px -apple-system,Roboto,sans-serif}}.xt b{{display:block;font:400 19px Georgia,serif;color:var(--c)}}.min{{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}}.min div{{border-radius:14px;padding:16px 12px;color:#fff;font:400 18px Georgia,serif;text-align:center}}.dir{{background:var(--c);color:#fff}}.dir h2{{color:#fff}}.dir p{{opacity:.88;margin-bottom:10px}}
 footer{{padding:28px 22px;font:13px -apple-system,Roboto,sans-serif;color:var(--suave);text-align:center}}
 .barra{{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px;background:rgba(251,248,242,.97);border-top:1px solid #e3dbcc}}
 .barra .btn{{padding:13px 8px;font-size:15px}}.barra .w{{border:1.5px solid var(--c);color:var(--c)}}
@@ -41,7 +41,7 @@ footer{{padding:28px 22px;font:13px -apple-system,Roboto,sans-serif;color:var(--
 <section id="reservar"><div class="k" style="color:var(--a)">{e(d["k_unid"])}</div><h2>{e(d["t_unid"])}</h2>{units}
 <div class="preco"><span class="s" style="font-size:14px">desde </span><b>{e(d["preco"])}</b><span class="s" style="font-size:14px"> /noite</span><div class="nota">* Preço ilustrativo, só para o esboço.</div></div>
 <a class="btn p" href="#">Ver disponibilidade</a>{extra}</section>
-<section style="padding-top:0"><div class="k" style="color:var(--a)">Porquê ficar aqui</div><h2>{e(d["t_dest"])}</h2><ul class="ch">{chips}</ul></section>
+{d.get("extra","")}<section style="padding-top:0"><div class="k" style="color:var(--a)">Porquê ficar aqui</div><h2>{e(d["t_dest"])}</h2><ul class="ch">{chips}</ul></section>
 <section class="dir"><h2>Reserve diretamente connosco</h2><p>Melhor preço, sem intermediários e resposta direta de quem vos recebe.</p><p class="s" style="font-size:14px">WhatsApp · Email · Calendário online</p></section>
 <footer>{e(d["nome"])} · {e(d["local"])}<br><span style="font-size:12px">Esboço preparado pela Postigo Digital · postigodigital.pt</span></footer>
 <div class="barra"><a class="btn p" href="#reservar">Reservar</a><a class="btn w" href="#">WhatsApp</a></div>
