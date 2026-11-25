@@ -6,30 +6,47 @@ from playwright.sync_api import sync_playwright
 
 slug, out = sys.argv[1], sys.argv[2]
 W, H = 390, 844            # proporções atuais do telemóvel (ecrã)
+SB = 44                    # barra de estado (hora, rede, Wi-Fi, bateria)
+PH = H - SB                # altura visível da página
 CREME = (246, 240, 230)
-ESC = 0.76
+ESC = 0.68
 CORES = int(sys.argv[3]) if len(sys.argv) > 3 else 96
 DITHER = False                 # escala final do ecrã dentro do GIF
 
 with sync_playwright() as p:
     b = p.chromium.launch()
-    pg = b.new_page(viewport={"width": W, "height": H}, device_scale_factor=1, color_scheme="light")
+    pg = b.new_page(viewport={"width": W, "height": PH}, device_scale_factor=1, color_scheme="light")
     pg.goto(f"file:///home/claude/demos/{slug}/index.html")
     pg.add_style_tag(content=".aviso{display:none!important}html{scroll-behavior:auto!important}")
     pg.wait_for_timeout(500)
-    total = pg.evaluate("document.documentElement.scrollHeight") - H
+    total = pg.evaluate("document.documentElement.scrollHeight") - PH
     nome = pg.evaluate("document.title.split(' · ')[0]")
-    passos = max(24, int(total / 95))           # ~45 px por frame a descer
+    passos = max(24, int(total / 32))           # ~45 px por frame a descer
     posicoes = [0] * 1                             # topo (pausa feita pela duração)
     descer = [round(total * (1 - math.cos(math.pi * i / passos)) / 2) for i in range(1, passos + 1)]
-    subir = [round(total * (1 + math.cos(math.pi * i / 12)) / 2) for i in range(1, 13)]
-    seq = [(0, 1200)] + [(y, 95) for y in descer] + [(total, 600)] + [(y, 70) for y in subir]
+    subir = [round(total * (1 + math.cos(math.pi * i / 16)) / 2) for i in range(1, 17)]
+    seq = [(0, 1200)] + [(y, 45) for y in descer] + [(total, 600)] + [(y, 45) for y in subir]
     shots = {}
     for y, _ in seq:
         if y not in shots:
             pg.evaluate(f"window.scrollTo(0,{y})"); pg.wait_for_timeout(40)
             shots[y] = Image.open(io.BytesIO(pg.screenshot())).convert("RGB")
     b.close()
+
+def desenha_estado(img):
+    d = ImageDraw.Draw(img); cor = (20, 20, 20)
+    try: f = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 16)
+    except Exception: f = ImageFont.load_default()
+    d.text((34, 13), "9:41", font=f, fill=cor)
+    x = 286
+    for i, h in enumerate([5, 8, 11, 14]):            # rede
+        d.rectangle([x + i * 5, 29 - h, x + i * 5 + 3, 29], fill=cor)
+    cx, cy = 320, 30                                  # Wi-Fi
+    for r in (13, 9, 5):
+        d.arc([cx - r, cy - r, cx + r, cy + r], 225, 315, fill=cor, width=2)
+    d.ellipse([cx - 2, cy - 3, cx + 2, cy + 1], fill=cor)
+    d.rounded_rectangle([336, 16, 362, 29], 3, outline=cor, width=2)   # bateria
+    d.rectangle([339, 19, 355, 26], fill=cor); d.rectangle([363, 20, 365, 25], fill=cor)
 
 # moldura
 sw, sh = int(W * ESC), int(H * ESC)
@@ -53,7 +70,10 @@ for t, f, yy, cor in [(t1, fonte, y0 + fh + 30, (40, 40, 40)), (t2, fonte2, y0 +
 rgb, durs = [], []
 for y, dur in seq:
     fr = base.copy()
-    ecra = shots[y].resize((sw, sh), Image.LANCZOS)
+    tela = Image.new("RGB", (W, H), (251, 248, 242))
+    tela.paste(shots[y], (0, SB))
+    desenha_estado(tela)
+    ecra = tela.resize((sw, sh), Image.LANCZOS)
     fr.paste(ecra, (x0 + borda, y0 + borda), mask)
     rgb.append(fr); durs.append(dur)
 # paleta única para todo o GIF (mais leve e sem tremer)
