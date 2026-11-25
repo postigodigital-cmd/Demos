@@ -1,0 +1,3 @@
+hero.jpg https://www.casagrande.com.pt/data/uploads/exteriores/2.jpg
+u1.jpg https://www.casagrande.com.pt/data/uploads/photo/main_page/32.jpg
+u2.jpg https://www.casagrande.com.pt/data/uploads/photo/main_page/1.JPG

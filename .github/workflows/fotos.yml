@@ -1,0 +1,27 @@
+name: Descarregar fotografias das demos
+on:
+  push:
+    paths: ['**/fotos.txt']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fotos:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descarregar
+        run: |
+          for lista in */fotos.txt; do
+            pasta=$(dirname "$lista"); mkdir -p "$pasta/img"
+            while read -r nome url; do
+              [ -z "$nome" ] && continue
+              [ -f "$pasta/img/$nome" ] && continue
+              curl -sSL --max-time 60 -A "Mozilla/5.0" -o "$pasta/img/$nome" "$url" || echo "falhou $url"
+            done < "$lista"
+          done
+      - name: Guardar
+        run: |
+          git config user.name "Postigo Digital"; git config user.email "postigodigital@gmail.com"
+          git add -A -- '*/img' || true
+          git diff --cached --quiet || (git commit -m "Fotografias das demos" && git push)
