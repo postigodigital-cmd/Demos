@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Quintal do Forno · Esboço · Postigo Digital</title>
+<style>
+:root{--verde:#1F3A2B;--verde2:#2A4B38;--creme:#F6F0E6;--papel:#FBF8F2;--camelia:#B8323F;--rosa:#E8B7B5;--tinta:#22261F;--suave:#6B6F62}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--papel);color:var(--tinta);line-height:1.55;padding-bottom:84px}
+.sans{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.aviso{background:#000;color:#ddd;font:12px/1.4 -apple-system,Segoe UI,Roboto,sans-serif;text-align:center;padding:7px 12px}
+.aviso b{color:#fff}
+header{position:sticky;top:0;z-index:5;background:rgba(251,248,242,.94);backdrop-filter:blur(6px);border-bottom:1px solid #e7e0d3;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+.marca{display:flex;align-items:center;gap:10px;font-size:18px;color:var(--verde);text-decoration:none}
+.lang{font:600 12px -apple-system,Segoe UI,Roboto,sans-serif;display:flex;gap:4px}
+.lang button{border:1px solid #cfc6b4;background:none;border-radius:20px;padding:5px 10px;color:var(--verde);cursor:pointer}
+.lang button.on{background:var(--verde);color:#fff;border-color:var(--verde)}
+.hero{background:radial-gradient(120% 80% at 80% 10%,#3b6a4c 0,var(--verde) 55%,#15291e 100%);color:var(--creme);padding:46px 22px 40px;position:relative;overflow:hidden}
+.hero svg.flor{position:absolute;right:-70px;top:-40px;width:250px;opacity:.32}
+.hero .kicker{position:relative}
+.kicker{font:600 11px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--rosa)}
+.hero h1{font-weight:400;font-size:42px;line-height:1.05;margin:14px 0 14px;max-width:11ch;position:relative}
+.hero p{max-width:34ch;font-size:17px;color:#e6dfd2;position:relative}
+.ctas{display:grid;gap:10px;margin-top:26px;position:relative}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:600 16px -apple-system,Segoe UI,Roboto,sans-serif;padding:15px 18px;border-radius:12px}
+.btn.p{background:var(--camelia);color:#fff}
+.btn.s{background:transparent;color:var(--creme);border:1.5px solid rgba(246,240,230,.55)}
+section{padding:44px 22px}
+h2{font-weight:400;font-size:30px;line-height:1.15;color:var(--verde);margin:8px 0 14px}
+.foto{border-radius:16px;aspect-ratio:4/3;display:flex;align-items:flex-end;padding:14px;color:#fff;font:600 12px -apple-system,Segoe UI,Roboto,sans-serif;letter-spacing:.04em;position:relative;overflow:hidden}
+.foto span{background:rgba(0,0,0,.35);padding:5px 9px;border-radius:20px}
+.f1{background:linear-gradient(160deg,#6f8f6a,#2f4a35 70%)}
+.f2{background:linear-gradient(160deg,#d68a8f,#8a2632 75%)}
+.f3{background:linear-gradient(160deg,#a99677,#4f4636 75%)}
+.cartao{background:#fff;border:1px solid #ebe3d4;border-radius:18px;padding:18px;margin-top:16px}
+.preco{display:flex;align-items:baseline;gap:8px;margin:6px 0 2px}
+.preco b{font-size:30px;font-weight:400;color:var(--verde)}
+.nota{font:12px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--suave)}
+ul.ic{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0 16px;font:14px -apple-system,Segoe UI,Roboto,sans-serif}
+ul.ic li{background:var(--creme);border-radius:10px;padding:9px 10px}
+.epoca{background:var(--creme);border-radius:18px;padding:18px;margin:16px 0}
+.meses{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;margin-top:10px}
+.meses i{height:28px;border-radius:5px;background:#e4dccb;font:600 9px -apple-system,sans-serif;font-style:normal;color:#8b8475;display:flex;align-items:flex-end;justify-content:center;padding-bottom:3px}
+.meses i.on{background:var(--camelia);color:#fff}
+.hist{background:var(--verde);color:var(--creme)}
+.hist h2{color:var(--creme)}
+.hist p{color:#d9d2c4;margin-bottom:12px}
+.ano{font-size:44px;color:var(--rosa)}
+footer{padding:30px 22px;font:14px -apple-system,Segoe UI,Roboto,sans-serif;color:var(--suave);text-align:center}
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:9;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(251,248,242,.97);border-top:1px solid #e3dbcc}
+.barra .btn{padding:13px 10px;font-size:15px}
+.barra .s{color:var(--verde);border-color:var(--verde)}
+@media(min-width:760px){body{max-width:760px;margin:0 auto}}
+[data-en]{display:none}
+body.en [data-pt]{display:none}
+body.en [data-en]{display:revert}
+</style>
+</head>
+<body>
+<div class="aviso"><b>Esboço de demonstração</b> preparado pela Postigo Digital para o Quintal do Forno · não é o site oficial</div>
+<header>
+  <a class="marca" href="#"><svg width="26" height="26" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#B8323F"/><g fill="#E8B7B5"><circle cx="20" cy="12" r="6"/><circle cx="27.6" cy="17.5" r="6"/><circle cx="24.7" cy="26.5" r="6"/><circle cx="15.3" cy="26.5" r="6"/><circle cx="12.4" cy="17.5" r="6"/></g><circle cx="20" cy="20" r="4" fill="#F2D27A"/></svg>Quintal do Forno</a>
+  <div class="lang"><button class="on" onclick="lg('pt')">PT</button><button onclick="lg('en')">EN</button></div>
+</header>
+
+<div class="hero">
+  <svg class="flor" viewBox="0 0 200 200"><g fill="#B8323F" opacity=".95"><ellipse cx="100" cy="52" rx="34" ry="42"/><ellipse cx="146" cy="86" rx="34" ry="42" transform="rotate(72 146 86)"/><ellipse cx="128" cy="140" rx="34" ry="42" transform="rotate(144 128 140)"/><ellipse cx="72" cy="140" rx="34" ry="42" transform="rotate(216 72 140)"/><ellipse cx="54" cy="86" rx="34" ry="42" transform="rotate(288 54 86)"/></g><g fill="#D9545F"><ellipse cx="100" cy="74" rx="20" ry="26"/><ellipse cx="124" cy="94" rx="20" ry="26" transform="rotate(72 124 94)"/><ellipse cx="114" cy="122" rx="20" ry="26" transform="rotate(144 114 122)"/><ellipse cx="86" cy="122" rx="20" ry="26" transform="rotate(216 86 122)"/><ellipse cx="76" cy="94" rx="20" ry="26" transform="rotate(288 76 94)"/></g><circle cx="100" cy="102" r="13" fill="#F2D27A"/></svg>
+  <div class="kicker">Serra da Estrela · desde o séc. XIX</div>
+  <h1 data-pt>Um jardim de camélias com história.</h1>
+  <h1 data-en>A camellia garden with a story.</h1>
+  <p data-pt>Jardim histórico da família Cabral, ao pé da Serra da Estrela. Fique na Casa da Hera ou visite o jardim na época das camélias.</p>
+  <p data-en>The Cabral family's historic garden at the foot of Serra da Estrela. Stay at Casa da Hera or visit the garden in camellia season.</p>
+  <div class="ctas">
+    <a class="btn p" href="#casa"><span data-pt>Reservar a Casa da Hera</span><span data-en>Book Casa da Hera</span> →</a>
+    <a class="btn s" href="#jardim"><span data-pt>Marcar visita ao jardim</span><span data-en>Book a garden visit</span></a>
+  </div>
+</div>
+
+<section id="casa">
+  <div class="kicker" style="color:var(--camelia)">Casa da Hera</div>
+  <h2 data-pt>Dormir dentro do jardim.</h2>
+  <h2 data-en>Sleep inside the garden.</h2>
+  <div class="foto f1"><span data-pt>As vossas fotografias da Casa da Hera</span><span data-en>Your Casa da Hera photos</span></div>
+  <div class="cartao">
+    <div class="sans" style="font-size:13px;color:var(--suave)" data-pt>Preço por noite</div>
+    <div class="sans" style="font-size:13px;color:var(--suave)" data-en>Price per night</div>
+    <div class="preco"><span class="sans" style="font-size:14px" data-pt>desde</span><span class="sans" style="font-size:14px" data-en>from</span><b>95 €</b></div>
+    <div class="nota" data-pt>* Preço ilustrativo, só para o esboço.</div>
+    <div class="nota" data-en>* Illustrative price, for this sketch only.</div>
+    <ul class="ic">
+      <li data-pt>🌿 Vista para o jardim</li><li data-en>🌿 Garden views</li>
+      <li data-pt>🌸 Camélias à porta</li><li data-en>🌸 Camellias at the door</li>
+      <li data-pt>🏡 Casa histórica</li><li data-en>🏡 Historic house</li>
+      <li data-pt>🏔️ Serra da Estrela</li><li data-en>🏔️ Serra da Estrela</li>
+    </ul>
+    <a class="btn p" href="#"><span data-pt>Ver datas e reservar</span><span data-en>Check dates &amp; book</span></a>
+    <div class="nota" style="text-align:center;margin-top:8px" data-pt>Reserva direta, por WhatsApp, calendário ou Booking</div>
+    <div class="nota" style="text-align:center;margin-top:8px" data-en>Book direct via WhatsApp, calendar or Booking</div>
+  </div>
+</section>
+
+<section id="jardim" style="padding-top:10px">
+  <div class="kicker" style="color:var(--camelia)" data-pt>O jardim</div>
+  <div class="kicker" style="color:var(--camelia)" data-en>The garden</div>
+  <h2 data-pt>Visitas por marcação, todo o ano.</h2>
+  <h2 data-en>Visits by appointment, all year round.</h2>
+  <div class="foto f2"><span data-pt>As camélias em flor</span><span data-en>Camellias in bloom</span></div>
+  <div class="epoca">
+    <b class="sans" style="font-size:14px" data-pt>Época das camélias</b>
+    <b class="sans" style="font-size:14px" data-en>Camellia season</b>
+    <div class="meses"><i>J</i><i class="on">F</i><i class="on">M</i><i class="on">A</i><i>M</i><i>J</i><i>J</i><i>A</i><i>S</i><i>O</i><i>N</i><i class="on">D</i></div>
+    <div class="nota" style="margin-top:8px" data-pt>Meses ilustrativos: ajustamos à floração do vosso jardim.</div>
+    <div class="nota" style="margin-top:8px" data-en>Illustrative months, to be matched to your garden.</div>
+  </div>
+  <a class="btn p" href="#"><span data-pt>Marcar visita</span><span data-en>Book a visit</span></a>
+</section>
+
+<section class="hist">
+  <div class="ano">séc. XIX</div>
+  <h2 data-pt>Uma família, um jardim.</h2>
+  <h2 data-en>One family, one garden.</h2>
+  <p data-pt>Fundado no final do século XIX por Manoel Cabral Soares de Albergaria e na família Cabral desde então, o Quintal do Forno é hoje um projeto de conservação do património, das camélias e da paisagem da Serra.</p>
+  <p data-en>Founded in the late 19th century by Manoel Cabral Soares de Albergaria and in the Cabral family ever since, Quintal do Forno is today a project to preserve heritage, camellias and the Serra landscape.</p>
+  <div class="foto f3" style="margin-top:8px"><span data-pt>Fotografias de arquivo da família</span><span data-en>Family archive photos</span></div>
+</section>
+
+<footer>
+  Quintal do Forno · Serra da Estrela<br>
+  <span style="font-size:12px" data-pt>Esboço preparado pela Postigo Digital · postigodigital.pt</span>
+  <span style="font-size:12px" data-en>Sketch by Postigo Digital · postigodigital.pt</span>
+</footer>
+
+<div class="barra">
+  <a class="btn p" href="#casa"><span data-pt>Reservar</span><span data-en>Book</span></a>
+  <a class="btn s" href="#jardim"><span data-pt>Marcar visita</span><span data-en>Garden visit</span></a>
+</div>
+<script>
+function lg(l){document.body.classList.toggle('en',l==='en');document.documentElement.lang=l;document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.textContent.toLowerCase()===l))}
+</script>
+</body>
+</html>
