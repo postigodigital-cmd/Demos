@@ -3,7 +3,7 @@
  "local": "Paços da Serra · Serra da Estrela",
  "cor": "#3B4A2A",
  "acento": "#9C5B2E",
- "hero": "https://www.casagrande.com.pt/data/uploads/exteriores/2.jpg",
+ "hero": "img/hero.jpg",
  "kicker": "Paços da Serra · Parque Natural da Serra da Estrela",
  "titulo": "Uma casa senhorial do séc. XVIII, entre olivais e camélias.",
  "sub": "Apartamentos na casa principal e três casas de campo para 2, 6 e 8 pessoas, a 8 km de Gouveia e de Seia.",
@@ -13,12 +13,12 @@
   {
    "nome": "Apartamentos na Casa Grande",
    "desc": "T1 na casa senhorial · Turismo de Habitação",
-   "img": "https://www.casagrande.com.pt/data/uploads/photo/main_page/32.jpg"
+   "img": "img/u1.jpg"
   },
   {
    "nome": "Casas de campo",
    "desc": "Para 2, 6 ou 8 pessoas · casa inteira",
-   "img": "https://www.casagrande.com.pt/data/uploads/photo/main_page/1.JPG"
+   "img": "img/u2.jpg"
   }
  ],
  "preco": "75 €",

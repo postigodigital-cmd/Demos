@@ -3,7 +3,7 @@
  "local": "Travancinha · Seia · Serra da Estrela",
  "cor": "#4A3B2C",
  "acento": "#D9822B",
- "hero": "https://solardosalperces.pt/wp-content/uploads/home13-1280x960.jpg",
+ "hero": "img/hero.jpg",
  "kicker": "Travancinha · Seia · Serra da Estrela",
  "titulo": "Sete quartos com nome de pedra, ao pé da Serra.",
  "sub": "Turismo de Habitação em Travancinha. Granito, Quartzo, Mica, Feldspato... cada quarto conta um pouco da Serra.",
@@ -13,12 +13,12 @@
   {
    "nome": "Granito · Quartzo · Mica",
    "desc": "Quartos temáticos com nome de minerais da Serra",
-   "img": "https://solardosalperces.pt/wp-content/uploads/IMG_0886-1280x960.jpg"
+   "img": "img/u1.jpg"
   },
   {
    "nome": "Biotite · Moscovite · Zircão · Feldspato",
    "desc": "Cada um com a sua personalidade",
-   "img": "https://solardosalperces.pt/wp-content/uploads/IMG_0924-1280x960.jpg"
+   "img": "img/u2.jpg"
   }
  ],
  "preco": "70 €",
