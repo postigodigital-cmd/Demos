@@ -7,7 +7,9 @@ from playwright.sync_api import sync_playwright
 slug, out = sys.argv[1], sys.argv[2]
 W, H = 390, 844            # proporções atuais do telemóvel (ecrã)
 CREME = (246, 240, 230)
-ESC = 0.84                 # escala final do ecrã dentro do GIF
+ESC = 0.76
+CORES = int(sys.argv[3]) if len(sys.argv) > 3 else 96
+DITHER = False                 # escala final do ecrã dentro do GIF
 
 with sync_playwright() as p:
     b = p.chromium.launch()
@@ -17,11 +19,11 @@ with sync_playwright() as p:
     pg.wait_for_timeout(500)
     total = pg.evaluate("document.documentElement.scrollHeight") - H
     nome = pg.evaluate("document.title.split(' · ')[0]")
-    passos = max(24, int(total / 55))           # ~45 px por frame a descer
+    passos = max(24, int(total / 95))           # ~45 px por frame a descer
     posicoes = [0] * 1                             # topo (pausa feita pela duração)
     descer = [round(total * (1 - math.cos(math.pi * i / passos)) / 2) for i in range(1, passos + 1)]
-    subir = [round(total * (1 + math.cos(math.pi * i / 18)) / 2) for i in range(1, 19)]
-    seq = [(0, 1200)] + [(y, 70) for y in descer] + [(total, 600)] + [(y, 55) for y in subir]
+    subir = [round(total * (1 + math.cos(math.pi * i / 12)) / 2) for i in range(1, 13)]
+    seq = [(0, 1200)] + [(y, 95) for y in descer] + [(total, 600)] + [(y, 70) for y in subir]
     shots = {}
     for y, _ in seq:
         if y not in shots:
@@ -48,11 +50,17 @@ t1 = f"Esboço de demonstração para {nome}"; t2 = "preparado pela Postigo Digi
 for t, f, yy, cor in [(t1, fonte, y0 + fh + 30, (40, 40, 40)), (t2, fonte2, y0 + fh + 56, (110, 110, 100))]:
     tw = d.textlength(t, font=f); d.text(((CW - tw) / 2, yy), t, font=f, fill=cor)
 
-frames, durs = [], []
+rgb, durs = [], []
 for y, dur in seq:
     fr = base.copy()
     ecra = shots[y].resize((sw, sh), Image.LANCZOS)
     fr.paste(ecra, (x0 + borda, y0 + borda), mask)
-    frames.append(fr.convert("P", palette=Image.ADAPTIVE, colors=96)); durs.append(dur)
+    rgb.append(fr); durs.append(dur)
+# paleta única para todo o GIF (mais leve e sem tremer)
+amostra = Image.new("RGB", (CW, CH * 4))
+for i, k in enumerate([0, len(rgb) // 3, 2 * len(rgb) // 3, len(rgb) - 1]):
+    amostra.paste(rgb[k], (0, CH * i))
+pal = amostra.quantize(colors=CORES, method=Image.MEDIANCUT)
+frames = [f.quantize(palette=pal, dither=Image.Dither.FLOYDSTEINBERG if DITHER else Image.Dither.NONE) for f in rgb]
 frames[0].save(out, save_all=True, append_images=frames[1:], duration=durs, loop=0, optimize=True, disposal=1)
 import os; print(out, round(os.path.getsize(out) / 1e6, 2), "MB", len(frames), "frames")
