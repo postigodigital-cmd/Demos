@@ -42,7 +42,7 @@ footer{{padding:28px 22px;font:13px -apple-system,Roboto,sans-serif;color:var(--
 <div class="preco"><span class="s" style="font-size:14px">desde </span><b>{e(d["preco"])}</b><span class="s" style="font-size:14px"> /noite</span><div class="nota">* Preço ilustrativo, só para o esboço.</div></div>
 <a class="btn p" href="#">Ver disponibilidade</a>{extra}</section>
 {d.get("extra","")}<section style="padding-top:0"><div class="k" style="color:var(--a)">Porquê ficar aqui</div><h2>{e(d["t_dest"])}</h2><ul class="ch">{chips}</ul></section>
-<section class="dir"><h2>Reserve diretamente connosco</h2><p>Melhor preço, sem intermediários e resposta direta de quem vos recebe.</p><p class="s" style="font-size:14px">WhatsApp · Email · Calendário online</p></section>
+<section class="dir"><h2>Reserve diretamente connosco</h2><p>Melhor preço, sem intermediários e resposta direta de quem vos recebe.</p><p class="s" style="font-size:14px">WhatsApp · Email · Calendário online</p></section><section style="padding:26px 22px;text-align:center"><p class="nota" style="font-size:13px">Este esboço é só um ponto de partida: cores, textos, secções e fotografias escolhem-se convosco, ao vosso gosto.</p></section>
 <footer>{e(d["nome"])} · {e(d["local"])}<br><span style="font-size:12px">Esboço preparado pela Postigo Digital · postigodigital.pt</span></footer>
 <div class="barra"><a class="btn p" href="#reservar">Reservar</a><a class="btn w" href="#">WhatsApp</a></div>
 </body></html>'''
