@@ -1,0 +1,31 @@
+name: Testar velocidade dos sites dos prospetos
+on:
+  push:
+    paths: ['_testes/sites.txt', '.github/workflows/teste-sites.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Testar (Lighthouse, modo telemóvel)
+        run: |
+          npm i -g lighthouse@12 >/dev/null 2>&1
+          mkdir -p _testes/resultados
+          while read -r slug url; do
+            [ -z "$slug" ] && continue
+            [ -f "_testes/resultados/$slug.json" ] && continue
+            lighthouse "$url" --quiet --output=json --output-path=/tmp/lh.json \
+              --form-factor=mobile --chrome-flags="--headless=new --no-sandbox" --max-wait-for-load=45000 \
+              || { echo "{\"site\":\"$url\",\"erro\":\"teste falhou\"}" > "_testes/resultados/$slug.json"; continue; }
+            python3 _testes/resumo.py /tmp/lh.json "$slug" "$url"
+          done < _testes/sites.txt
+      - name: Guardar
+        run: |
+          git config user.name "Postigo Digital"; git config user.email "postigodigital@gmail.com"
+          git add -A _testes
+          git diff --cached --quiet || (git commit -m "Resultados dos testes de sites" && git pull --rebase && git push)
