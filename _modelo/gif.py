@@ -67,6 +67,11 @@ d.rounded_rectangle([x0 + 4, y0 + 8, x0 + fw + 4, y0 + fh + 8], raio, fill=(225,
 d.rounded_rectangle([x0, y0, x0 + fw, y0 + fh], raio, fill=(17, 17, 17))
 t1 = f"Esboço de demonstração para {nome}"; t2 = "preparado pela Postigo Digital · não é o site oficial"
 for t, f, yy, cor in [(t1, fonte, y0 + fh + 30, (40, 40, 40)), (t2, fonte2, y0 + fh + 56, (110, 110, 100))]:
+    tam = 15 if f is fonte else 12
+    while d.textlength(t, font=f) > CW - 24 and tam > 9:
+        tam -= 1
+        try: f = ImageFont.truetype(f.path, tam)
+        except Exception: break
     tw = d.textlength(t, font=f); d.text(((CW - tw) / 2, yy), t, font=f, fill=cor)
 
 rgb, durs = [], []
