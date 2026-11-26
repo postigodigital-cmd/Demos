@@ -1,0 +1,20 @@
+{
+ "nome": "Casa da Fândega",
+ "local": "Loriga · Serra da Estrela",
+ "cor": "#4A3B2C",
+ "acento": "#B5562F",
+ "hero": "img/hero.jpg",
+ "kicker": "Loriga · Serra da Estrela",
+ "titulo": "Uma casa de granito para juntar toda a família.",
+ "sub": "400 m² só para o seu grupo, com piscina privada, jardim e o vale de Loriga à frente.",
+ "k_unid": "A casa",
+ "t_unid": "Espaço para todos, sem abdicar do conforto.",
+ "unidades": [
+  {"nome": "10 quartos", "desc": "Todos com cama de casal grande · 11 casas de banho", "img": "img/u1.jpg"},
+  {"nome": "Piscina privada", "desc": "Com vista para a aldeia e a serra · jardim e churrasqueira", "img": "img/u2.jpg"}
+ ],
+ "preco": "450 €",
+ "t_dest": "Tudo o que um grupo grande precisa.",
+ "destaques": ["🏡 Casa inteira", "🏊 Piscina privada", "🔥 Lareira", "🍖 Churrasqueira", "🐾 Animais aceites", "🔌 Carregador elétrico"],
+ "extra": "<section style=\"padding-top:0\"><div class=\"k\" style=\"color:var(--a)\">A casa em números</div><h2>Feita para grupos.</h2><div class=\"min\"><div style=\"background:#4A3B2C\">28<br><small>pessoas</small></div><div style=\"background:#B5562F\">10<br><small>quartos</small></div><div style=\"background:#6B7F5E\">11<br><small>casas de banho</small></div><div style=\"background:#8A6E4B\">400 m²<br><small>de casa</small></div></div><div class=\"xt\" style=\"margin-top:14px\"><div><b>Para quem é</b>Famílias grandes, encontros de amigos e retiros de empresa. Crianças são bem-vindas.</div></div></section>"
+}
