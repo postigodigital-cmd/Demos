@@ -1,0 +1,16 @@
+{
+ "site": "https://horteladaribeira.pt",
+ "data": "2026-11-26T21:27:35.570Z",
+ "modo": "telemóvel",
+ "velocidade": 99,
+ "acessibilidade": 100,
+ "boas_praticas": 96,
+ "seo": 82,
+ "primeiro_conteudo": "0.8 s",
+ "maior_conteudo": "0.9 s",
+ "tempo_total_bloqueio": "120 ms",
+ "estabilidade_cls": "0",
+ "https": true,
+ "adaptado_telemovel": true,
+ "erro": null
+}
