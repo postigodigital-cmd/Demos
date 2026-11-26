@@ -1,0 +1,20 @@
+{
+ "nome": "Casa dos Toros",
+ "local": "Penhas da Saúde · Serra da Estrela",
+ "cor": "#2F3B45",
+ "acento": "#9C5B2E",
+ "hero": "img/hero.jpg",
+ "kicker": "Penhas da Saúde · Serra da Estrela",
+ "titulo": "Um chalet no coração da Serra, acima das nuvens.",
+ "sub": "Casa inteira para o seu grupo, com lareira, jardim e a neve à porta no inverno.",
+ "k_unid": "O chalet",
+ "t_unid": "Espaço para todos, com alma de montanha.",
+ "unidades": [
+  {"nome": "6 quartos", "desc": "Até 13 pessoas · madeira, lareira e vista para a serra", "img": "img/u1.jpg"},
+  {"nome": "Casa inteira", "desc": "Só para o seu grupo · jardim e cozinha equipada", "img": "img/u2.jpg"}
+ ],
+ "preco": "250 €",
+ "t_dest": "Inverno com neve, verão com lagoas.",
+ "destaques": ["🏔️ Penhas da Saúde", "🔥 Lareira", "❄️ Neve no inverno", "🌊 Lagoas por perto", "👨‍👩‍👧‍👦 Até 13 pessoas", "🍳 Cozinha equipada"],
+ "extra": "<section style=\"padding-top:0\"><div class=\"k\" style=\"color:var(--a)\">Os quartos</div><h2>Cada quarto tem nome próprio.</h2><div class=\"min\"><div style=\"background:#2F3B45\">Quarto<br>Oval</div><div style=\"background:#9C5B2E\">Quarto<br>Escada</div><div style=\"background:#5E6E5A\">Quarto<br>do Baú</div><div style=\"background:#7A6A55\">Quarto<br>Triplo</div></div></section>"
+}
