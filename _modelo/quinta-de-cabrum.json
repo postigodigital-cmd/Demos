@@ -1,0 +1,20 @@
+{
+ "nome": "Quinta de Cabrum",
+ "local": "Alvoco da Serra · Serra da Estrela",
+ "cor": "#3E4A2F",
+ "acento": "#8A6D3B",
+ "hero": "img/hero.jpg",
+ "kicker": "Um paraíso na Serra da Estrela",
+ "titulo": "Uma casa de pedra do século XIX, a 1100 metros.",
+ "sub": "Onde o tempo não conta e o espaço não tem limites. Casa inteira com piscina, lareira e a Serra à volta.",
+ "k_unid": "A casa",
+ "t_unid": "Pedra, madeira e conforto de montanha.",
+ "unidades": [
+  {"nome": "4 quartos", "desc": "Até 9 pessoas · 150 m² · lareira e sala de jogos", "img": "img/u1.jpg"},
+  {"nome": "Piscina com vista", "desc": "Rodeada pela serra · jardim, terraço e espreguiçadeiras", "img": "img/u2.jpg"}
+ ],
+ "preco": "180 €",
+ "t_dest": "Neve no inverno, piscina no verão.",
+ "destaques": ["🏡 Casa inteira", "🏊 Piscina", "🔥 Lareira", "❄️ Neve no inverno", "🎲 Sala de jogos", "🥾 Trilhos à porta"],
+ "extra": "<section style=\"padding-top:0\"><div class=\"k\" style=\"color:var(--a)\">Duas estações, uma casa</div><h2>Venha no inverno. Volte no verão.</h2><div class=\"xt\"><div><b>Inverno</b>Neve à porta, lareira acesa e a casa de pedra só para vocês.</div><div><b>Verão</b>Piscina com vista para a serra, trilhos e noites frescas a 1100 metros.</div></div></section>"
+}
