@@ -1,0 +1,16 @@
+{
+ "site": "https://quintaldoforno.com",
+ "data": "2026-11-26T21:31:24.891Z",
+ "modo": "telemóvel",
+ "velocidade": 60,
+ "acessibilidade": 94,
+ "boas_praticas": 100,
+ "seo": 92,
+ "primeiro_conteudo": "3.7 s",
+ "maior_conteudo": "6.7 s",
+ "tempo_total_bloqueio": "120 ms",
+ "estabilidade_cls": "0",
+ "https": true,
+ "adaptado_telemovel": true,
+ "erro": null
+}
