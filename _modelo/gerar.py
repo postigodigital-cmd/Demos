@@ -45,5 +45,5 @@ footer{{padding:28px 22px;font:13px -apple-system,Roboto,sans-serif;color:var(--
 <section class="dir"><h2>Reserve diretamente connosco</h2><p>Melhor preço, sem intermediários e resposta direta de quem vos recebe.</p><p class="s" style="font-size:14px">WhatsApp · Email · Calendário online</p></section><section style="padding:26px 22px;text-align:center"><p class="nota" style="font-size:13px">Este esboço é só um ponto de partida: cores, textos, secções e fotografias escolhem-se convosco, ao vosso gosto.</p></section>
 <footer>{e(d["nome"])} · {e(d["local"])}<br><span style="font-size:12px">Esboço preparado pela Postigo Digital · postigodigital.pt</span></footer>
 <div class="barra"><a class="btn p" href="#reservar">Reservar</a><a class="btn w" href="#">WhatsApp</a></div>
-</body></html>'''
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{{"token": "a3b89414fee64e46a75b1ccb7246c2ec"}}'></script><!-- End Cloudflare Web Analytics --></body></html>'''
 import os; os.makedirs(out,exist_ok=True); open(os.path.join(out,"index.html"),"w",encoding="utf-8").write(page); print("ok",out)
