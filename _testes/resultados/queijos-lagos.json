@@ -1,0 +1,16 @@
+{
+ "site": "https://www.queijoslagos.com",
+ "data": "2026-11-27T18:32:09.253Z",
+ "modo": "telemóvel",
+ "velocidade": 36,
+ "acessibilidade": 86,
+ "boas_praticas": 96,
+ "seo": 100,
+ "primeiro_conteudo": "5.6 s",
+ "maior_conteudo": "27.1 s",
+ "tempo_total_bloqueio": "960 ms",
+ "estabilidade_cls": "0",
+ "https": true,
+ "adaptado_telemovel": true,
+ "erro": null
+}
