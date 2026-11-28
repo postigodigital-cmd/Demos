@@ -1,0 +1,32 @@
+{
+ "site": "https://www.queijoslagos.com",
+ "abre": true,
+ "estado_http": 200,
+ "url_final": "https://queijoslagos.com/inicio/index.php/pt/",
+ "emails": [
+  "geral@queijoslagos.com"
+ ],
+ "telefones": [
+  "238 602 578",
+  "937054401",
+  "937054405"
+ ],
+ "instagram": [],
+ "facebook": [
+  "https://www.facebook.com/QueijosLagos"
+ ],
+ "booking": [],
+ "airbnb": [],
+ "thefork": [],
+ "whatsapp": [],
+ "botao_reserva": false,
+ "linguas": [
+  "en-GB",
+  "pt-BR",
+  "x-default"
+ ],
+ "ano_rodape": null,
+ "titulo": "Queijos Lagos - Queijos de Seia - Início",
+ "feito_com": "Joomla! - Open Source Content Management",
+ "viewport_telemovel": true
+}

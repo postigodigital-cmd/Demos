@@ -1,0 +1,42 @@
+{
+ "site": "https://quintaldoforno.com",
+ "abre": true,
+ "estado_http": 200,
+ "url_final": "https://quintaldoforno.com",
+ "emails": [
+  "info@quintaldoforno.com"
+ ],
+ "telefones": [
+  "202127946",
+  "222.059 256",
+  "230342348",
+  "256 222.059",
+  "256 289.941",
+  "285714286"
+ ],
+ "instagram": [
+  "https://www.instagram.com/quintaldoforno/"
+ ],
+ "facebook": [
+  "https://www.facebook.com/quintaldoforno",
+  "https://www.facebook.com/quintaldoforno/",
+  "https://www.facebook.com/sharer/sharer.php?u=https://quintaldoforno.com/"
+ ],
+ "booking": [],
+ "airbnb": [],
+ "thefork": [],
+ "whatsapp": [],
+ "botao_reserva": false,
+ "linguas": [
+  "en",
+  "en-GB",
+  "es",
+  "es-ES",
+  "pt",
+  "pt-PT"
+ ],
+ "ano_rodape": 2017,
+ "titulo": "Jardim Histórico de Camélias | Quintal do Forno | Início",
+ "feito_com": "WordPress 7.1.5",
+ "viewport_telemovel": true
+}

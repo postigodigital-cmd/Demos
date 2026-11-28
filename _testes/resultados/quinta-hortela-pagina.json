@@ -1,0 +1,41 @@
+{
+ "site": "https://horteladaribeira.pt",
+ "abre": true,
+ "estado_http": 200,
+ "url_final": "https://horteladaribeira.pt",
+ "emails": [
+  "geral@horteladaribeira.pt"
+ ],
+ "telefones": [
+  "+351 966 675 710",
+  "219419348"
+ ],
+ "instagram": [
+  "https://www.instagram.com/_horteladaribeira"
+ ],
+ "facebook": [
+  "https://www.facebook.com/horteladaribeira1"
+ ],
+ "booking": [
+  "https://www.booking.com/hotel/pt/hortela-da-ribeira-serra-da-estrela.html"
+ ],
+ "airbnb": [
+  "https://www.airbnb.pt/rooms/1085555482194193484"
+ ],
+ "thefork": [],
+ "whatsapp": [
+  "https://wa.me/351966675710?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20a%20disponibilidade%20da%20Hortel%C3%A3%20da%20Ribeira."
+ ],
+ "botao_reserva": true,
+ "linguas": [
+  "en",
+  "es",
+  "fr",
+  "pt",
+  "x-default"
+ ],
+ "ano_rodape": 2026,
+ "titulo": "Hortelã da Ribeira · Turismo Rural na Serra da Estrela",
+ "feito_com": null,
+ "viewport_telemovel": true
+}

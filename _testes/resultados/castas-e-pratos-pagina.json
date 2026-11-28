@@ -1,0 +1,29 @@
+{
+ "site": "https://www.castasepratos.com",
+ "abre": true,
+ "estado_http": 200,
+ "url_final": "https://castasepratos.com/",
+ "emails": [
+  "info@castasepratos.com"
+ ],
+ "telefones": [
+  "+351 254 323 290",
+  "+351254323290"
+ ],
+ "instagram": [
+  "https://www.instagram.com/castasepratos/"
+ ],
+ "facebook": [
+  "https://www.facebook.com/profile.php?id=61558159916881"
+ ],
+ "booking": [],
+ "airbnb": [],
+ "thefork": [],
+ "whatsapp": [],
+ "botao_reserva": true,
+ "linguas": [],
+ "ano_rodape": 2026,
+ "titulo": "Restaurante Castas & Pratos – Vinhos do Douro & Wine Bar",
+ "feito_com": "All in One SEO Pro (AIOSEO) 5.0.4",
+ "viewport_telemovel": true
+}

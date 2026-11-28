@@ -1,0 +1,7 @@
+{
+ "site": "https://www.nidiomas.com",
+ "abre": false,
+ "estado_http": null,
+ "url_final": "https://www.nidiomas.com",
+ "erro": "<urlopen error [Errno -2] Name or service not known>"
+}
