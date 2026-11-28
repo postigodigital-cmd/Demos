@@ -18,6 +18,7 @@ jobs:
           mkdir -p _testes/resultados
           while read -r slug url; do
             [ -z "$slug" ] && continue
+            [ -f "_testes/resultados/$slug-pagina.json" ] || python3 _testes/ler.py "$slug" "$url" || true
             [ -f "_testes/resultados/$slug.json" ] && continue
             lighthouse "$url" --quiet --output=json --output-path=/tmp/lh.json \
               --form-factor=mobile --chrome-flags="--headless=new --no-sandbox" --max-wait-for-load=45000 \
