@@ -1,0 +1,16 @@
+{
+ "site": "https://www.castasepratos.com",
+ "data": "2026-11-28T09:42:38.483Z",
+ "modo": "telemóvel",
+ "velocidade": 48,
+ "acessibilidade": 90,
+ "boas_praticas": 75,
+ "seo": 100,
+ "primeiro_conteudo": "3.8 s",
+ "maior_conteudo": "8.3 s",
+ "tempo_total_bloqueio": "490 ms",
+ "estabilidade_cls": "0",
+ "https": true,
+ "adaptado_telemovel": true,
+ "erro": null
+}
